@@ -24,7 +24,7 @@ function scoresAverage(moviesArray) {
     if (moviesArray.length === 0) {
         return 0;
     }
-    const scores = moviesArray.map(movie => movie.score);
+    const scores = moviesArray.map((movie) => movie.score);
     const sum = scores.reduce((acc, curr) => acc + curr);
     const avg = sum / scores.length;
     return Math.round(avg * 100) / 100;
@@ -59,13 +59,16 @@ function orderByYear(moviesArray) {
     return orderedMovies;
 }
 
-console.log(orderByYear(movies));
+// console.log(orderByYear(movies));
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 function orderAlphabetically(moviesArray) {
     const orderedMovies = moviesArray.slice().sort((a, b) => a.title.localeCompare(b.title));
-    return orderedMovies.slice(0, 20);
+    const orderedTitles = orderedMovies.map(movie => movie.title).slice(0, 20);
+    return orderedTitles;
 }
+
+orderAlphabetically(movies);
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 function turnHoursToMinutes(moviesArray) { }

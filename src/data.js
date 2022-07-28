@@ -1614,7 +1614,7 @@ const movies = [
     director: 'Steven Spielberg',
     duration: '2h 7min',
     genre: ['Adventure', 'Sci-Fi', 'Thriller'],
-    score: 8.1
+    score: 0,
   },
   {
     title: 'Spotlight',
@@ -2001,3 +2001,12 @@ const movies = [
     score: 8
   }
 ];
+
+module.exports = movies;
+
+// function getAllDirectors(allMovies) {
+//   const directors = allMovies.map(movie => movie.director);
+//   console.log(directors);
+// }
+
+// console.log(getAllDirectors(movies));
